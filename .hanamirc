@@ -1,0 +1,4 @@
+project=webpack_config
+architecture=container
+test=minitest
+template=erb
