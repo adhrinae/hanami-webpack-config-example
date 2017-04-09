@@ -5,6 +5,18 @@
   "author": "Dohyung Ahn <emaren84@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
     "webpack": "^2.3.3"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "vue": "^2.2.6"
+  },
+  "scripts": {
+    "webpack": "NODE_ENV=development webpack --hide-modules",
+    "dev": "NODE_ENV=development webpack --hide-modules --watch",
+    "build": "NODE_ENV=production webpack --hide-modules"
   }
 }
