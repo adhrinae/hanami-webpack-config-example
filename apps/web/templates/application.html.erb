@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Web</title>
+    <title>Projects</title>
+    <%= stylesheet 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css' %>
+    <%= stylesheet 'projects' %>
     <%= favicon %>
   </head>
   <body>
-    <%= yield %>
+    <div class="container" id="app">
+      <%= yield %>
+    </div>
+
+    <%= javascript 'vendor', 'app' %>
   </body>
 </html>

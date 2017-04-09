@@ -6,6 +6,9 @@ gem 'hanami-model', '~> 1.0'
 
 gem 'sqlite3'
 
+gem 'byebug'
+gem 'pry'
+
 group :development do
   # Code reloading
   # See: http://hanamirb.org/guides/projects/code-reloading
