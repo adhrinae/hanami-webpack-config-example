@@ -40,7 +40,7 @@ class Form {
   }
 
   post(url) {
-    this.submit('post', url);
+    return this.submit('post', url);
   }
 
   submit(requestType, url) {
@@ -49,12 +49,15 @@ class Form {
         .then(response => {
           this.onSuccess(response.data);
 
-          resolve(reponse.data);
+          resolve(response.data);
         })
         .catch(error => {
-          this.onFail(error.response.data);
+          console.log(error);
+          if (error.response) {
+            this.onFail(error.response.data);
 
-          reject(error.response.data);
+            reject(error.response.data);
+          }
         });
     });
   }

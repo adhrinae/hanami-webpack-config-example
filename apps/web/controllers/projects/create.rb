@@ -14,7 +14,10 @@ module Web::Controllers::Projects
           description: params[:description]
         )
         
-        self.body = { success: 'Project saved.' }.to_json
+        self.body = { 
+          success: 'Project saved.',
+          project: project.to_h
+        }.to_json
       else
         self.status = 422
         self.body = params.errors.to_json
